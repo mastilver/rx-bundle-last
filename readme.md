@@ -16,9 +16,9 @@ $ npm install --save rx-bundle-last
 
 var rxBundleLast = require('rx-bundle-last');
 
-var source = getData();
+var source = getData(); // get an Observable
 
-var bundledSource = rxBundleLast(source)(5);
+var bundledSource = rxBundleLast(source, 5);
 
 bundledSource.forEach(function(array){
     assert.equal(array.length, 5);
@@ -30,21 +30,28 @@ bundledSource.forEach(function(array){
 
 ## API
 
-### rxBundleLast(source)(length)
+### rxBundleLast(source, min, [max])
 
 #### source
 
 *Required*  
 Type: `Observable`
 
-From which we create the bundled source
+From which the bundled source is created
 
-#### length
+#### min
 
 *Required*  
 Type: `int`
 
-Size of the array the source will output
+The minimum size the emitted array will be
+
+#### max
+
+Type: `int`  
+Default: min
+
+The maximum size the emitted array will be
 
 
 ## License
