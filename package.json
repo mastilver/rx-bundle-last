@@ -1,7 +1,7 @@
 {
   "name": "rx-bundle-last",
   "version": "1.0.0",
-  "description": "My wicked module",
+  "description": "Emit an array of the latest emitted value",
   "license": "MIT",
   "repository": "mastilver/rx-bundle-last",
   "author": {
