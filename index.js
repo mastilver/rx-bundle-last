@@ -7,6 +7,14 @@ module.exports = function (source, min, max) {
         max = min;
     }
 
+    if(typeof min !== 'number' || typeof max !== 'number'){
+        throw new TypeError('min and max should be numbers');
+    }
+
+    if(min > max){
+        throw new Error('min can\'t be superior to max');
+    }
+
     source = source
     .scan(function(acc, x){
         acc.push(x);
