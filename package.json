@@ -1,6 +1,6 @@
 {
   "name": "rx-bundle-last",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Emit an array of the latest emitted value",
   "license": "MIT",
   "repository": "mastilver/rx-bundle-last",
